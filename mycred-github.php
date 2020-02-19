@@ -46,6 +46,8 @@ function test_github_data(){
             echo "Full Name: ".$repo->getFullName()."<br>";
             echo "Name: ".$repo->getName()."<br>";
         }
+        echo "done";
+        echo "done";
     } catch (GitHubClientException $e){
         var_dump($e->getMessage());
     }
