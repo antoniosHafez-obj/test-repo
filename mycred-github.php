@@ -31,11 +31,11 @@ function test_github_data(){
     require_once 'github-php-client-master/client/GitHubClient.php';
 
     $client = new GitHubClient();
-    $username = "21a343bb79e7b444c1b2c091c50419466f4b77fe";
+    $username = "d17a9012f6a22ded6290a63984512521d53ba33asdf asdf asdf sadf0";
     echo "<pre>";
-    try{
-        $client->setAuthType('Oauth');
-        $client->setOauthToken($username);
+//    try{
+        $client->setAuthType('x-oauth-basic');
+        $client->setOauthKey($username);
         $repos = $client->repos->listYourRepositories();
         /**
          * @param GitHubSimpleRepo $repo
@@ -48,7 +48,7 @@ function test_github_data(){
         }
         echo "done";
         echo "done";
-    } catch (GitHubClientException $e){
-        var_dump($e->getMessage());
-    }
+//    } catch (GitHubClientException $e){
+//        var_dump($e->getMessage());
+//    }
 }
